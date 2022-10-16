@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>C programming quiz</title>
+<style>
+body{
+background-image:url('image.jpeg');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100% 100%;
+}
+</style>
+</head>
+<body>
+
+<p id="fff1" style='display:none;font-size:30px;text-align:center;margin-top:100px;font-style:bold'></p>
+<p id="fff2" style='display:none;font-size:30px;text-align:center;font-style:bold'></p>
+<p id="fff3" style='display:none;font-size:30px;text-align:center;font-style:bold'></p>
+
+<div id="bdy">
+<script>
+var cnt=-1;
+icnt=(function(){
+ cnt=0;
+return function(){
+cnt++;
+}
+})();
+</script>
+
+<script>
+function fun1(valu)
+{
+let x=document.getElementById("1q");
+for(let i=1;i<x.children.length;i++)
+{
+let p=x.children[i];
+p.firstElementChild.disabled=true;
+}
+if(valu=="1a")
+icnt();
+document.getElementById("view1").style.display="block";
+document.getElementById("view1").children[1].style.display="block";
+//alert("your current score is: "+ cnt);
+}
+
+function fun2(valu)
+{
+let x=document.getElementById("2q");
+for(let i=1;i<x.children.length;i++)
+{
+let p=x.children[i];
+p.firstElementChild.disabled=true;
+}
+if(valu=="2d")
+icnt();
+document.getElementById("view2").style.display="block";
+document.getElementById("view2").children[1].style.display="block";
+//alert("your current score is: "+ cnt);
+}
+
+function fun3(valu)
+{
+let x=document.getElementById("3q");
+for(let i=1;i<x.children.length;i++)
+{
+let p=x.children[i];
+p.firstElementChild.disabled=true;
+}
+if(valu=="3d")
+icnt();
+
+document.getElementById("view3").style.display="block";
+document.getElementById("view3").children[1].style.display="block";
+//alert("your current score is: "+ cnt);
+}
+
+function fun4(valu)
+{
+let x=document.getElementById("4q");
+for(let i=1;i<x.children.length;i++)
+{
+let p=x.children[i];
+p.firstElementChild.disabled=true;
+}
+if(valu=="4c")
+icnt();
+
+document.getElementById("view4").style.display="block";
+document.getElementById("view4").children[1].style.display="block";
+//alert("your current score is: "+ cnt);
+}
+
+function fun5(valu)
+{
+let x=document.getElementById("5q");
+for(let i=1;i<x.children.length;i++)
+{
+let p=x.children[i];
+p.firstElementChild.disabled=true;
+}
+if(valu=="5c")
+icnt();
+
+document.getElementById("view5").style.display="block";
+document.getElementById("view5").children[1].style.display="block";
+//alert("your current score is: "+ cnt);
+}
+</script>
+<h2 style="text-align:center">QUIZ ON C PROGRAMMING LANGUAGE</h2>
+
+<div id="1q">
+<p style="font-size:25px;color:blue;font-style:bold;border:2px solid black">
+1. Value of c in code:i=1,c=++i is
+</p>
+<p><button id="1a" style="background-color:green;border:2px solid black" onclick=fun1(this.id)>2</button></p>
+<p><button id="1b" style="background-color:green;border:2px solid black" onclick=fun1(this.id)>0</button></p>
+<p><button id="1c" style="background-color:green;border:2px solid black" onclick=fun1(this.id)>1</button></p>
+<p><button id="1d" style="background-color:green;border:2px solid black" onclick=fun1(this.id)>3</button></p>
+</div>
+
+<script>
+function fqe()
+{
+document.getElementById('fqe').style.display="block";
+}
+</script>
+
+<div id="view1" style='display:none'>
+<p style='display:none' id="fqe">1. Corerect answer is: 2 <br> 2. Explannation: initial value of i variable is 1 and we are performing a pre incremention of variable i before assigning it to the variable c. Hence the value of Variable c is 2. </p>
+<button id="b1" onclick="fqe()" style='display:none;background-color:green;color:black'>view answer</button>
+</div>
+
+
+<div id="2q">
+<p style="font-size:25px;color:blue;font-style:bold;border:2px solid black">
+2.What is the output of the following code snippet:
+#include<stdio.h>
+main()
+{
+const int a=5;
+a++;
+printf("%d",a);
+}
+</p>
+<p><button id="2a" style="background-color:green;border:2px solid black" onclick=fun2(this.id)>6</button></p>
+<p><button id="2b" style="background-color:green;border:2px solid black" onclick=fun2(this.id)>5</button></p>
+<p><button id="2c" style="background-color:green;border:2px solid black" onclick=fun2(this.id)>no output</button></p>
+<p><button id="2d" style="background-color:green;border:2px solid black" onclick=fun2(this.id)>compilation error</button></p>
+</div>
+
+<script>
+function sqe()
+{
+document.getElementById('sqe').style.display="block";
+}
+</script>
+
+<div id="view2" style='display:none'>
+<p style='display:none' id="sqe">1. Corerect answer is: compilation error <br> 2.Explanation: a in the given code snippet, we have deckared variable a as constant. In C programming lanfuage modifying the constant variable results in compilation error.</p>
+<button id="b1" onclick="sqe()" style='display:none;background-color:green;color:black'>view answer</button>
+</div>
+
+<div id="3q">
+<p style="font-size:25px;color:blue;font-style:bold;border:2px solid black">
+3.what is the output of the following program?
+#include<stdio.h>
+main()
+{
+float t=2;
+switch(t)
+{
+case 1:printf("hello");break;
+case 2:printf("hi");break;
+default:printf("something went wrong");break;
+}
+}
+</p>
+<p><button id="3a" style="background-color:green;border:2px solid black" onclick=fun3(this.id)>hello</button></p>
+<p><button id="3b" style="background-color:green;border:2px solid black" onclick=fun3(this.id)>hi</button></p>
+<p><button id="3c" style="background-color:green;border:2px solid black" onclick=fun3(this.id)>something went wrong</button></p>
+<p><button id="3d" style="background-color:green;border:2px solid black" onclick=fun3(this.id)>compilation error</button></p>
+</div>
+
+<script>
+function tqe()
+{
+document.getElementById('tqe').style.display="block";
+}
+</script>
+
+<div id="view3" style='display:none'>
+<p style='display:none' id="tqe">1. Corerect answer is: something went wrong<br> 2. Explannation: Explannation: C programming language syntax says that only integer and charater type value can be used in switch. But in the given code snippet we are using float type with switch statement which results in ciompilation error</p>
+<button id="b1" onclick="tqe()" style='display:none;background-color:green;color:black'>view answer</button>
+</div>
+
+<div id="4q">
+<p style="font-size:25px;color:blue;font-style:bold;border:2px solid black">
+4.which of the following is a logical operator
+</p>
+<p><button id="4a" style="background-color:green;border:2px solid black" onclick=fun4(this.id)>&</button></p>
+<p><button id="4b" style="background-color:green;border:2px solid black" onclick=fun4(this.id)>|</button></p>
+<p><button id="4c" style="background-color:green;border:2px solid black" onclick=fun4(this.id)>&&</button></p>
+<p><button id="4d" style="background-color:green;border:2px solid black" onclick=fun4(this.id)>all of the above</button></p>
+</div>
+
+<script>
+function ftqe()
+{
+document.getElementById('ftqe').style.display="block";
+}
+</script>
+
+<div id="view4" style='display:none'>
+<p style='display:none' id="ftqe">1. Corerect answer is: && <br> 2.Explanation: | and & are bitwise operstors.</p>
+<button id="b1" onclick="ftqe()" style='display:none;background-color:green;color:black'>view answer</button>
+</div>
+
+<div id="5q">
+<p style="font-size:25px;color:blue;border:2px solid black">
+5. Which of the following function is used to free the dynamically allocated memory:
+</p>
+<p><button id="5a" style="background-color:green;border:2px solid black" onclick=fun5(this.id)>pre()</button></p>
+<p><button id="5b" style="background-color:green;border:2px solid black" onclick=fun5(this.id)>free</button></p>
+<p><button id="5c" style="background-color:green;border:2px solid black" onclick=fun5(this.id)>free()</button></p>
+<p><button id="5d" style="background-color:green;border:2px solid black" onclick=fun5(this.id)>free alloc()</button></p>
+</div>
+
+<script>
+function ffqe()
+{
+document.getElementById('ffqe').style.display="block";
+}
+</script>
+
+<div id="view5" style='display:none'>
+<p style='display:none' id="ffqe">1. Corerect answer is: free() <br> 2.Explanation: In C programming lanfuage, free() is the dynamic mempry allocation function that is used to free the allocated memory.</p>
+<button id="b1" onclick="ffqe()" style='display:none;background-color:green;color:black'>view answer</button>
+</div>
+
+
+<script>
+function ff()
+{
+document.getElementById("bdy").style.display="none";
+document.getElementById("fff1").style.display="block";
+document.getElementById("fff1").innerHTML="Hey User";
+document.getElementById("fff2").style.display="block";
+document.getElementById("fff2").innerHTML="You have scored " +cnt;
+document.getElementById("fff3").style.display="block";
+if(cnt>=3)
+document.getElementById("fff3").innerHTML="Excellent";
+else
+document.getElementById("fff3").innerHTML="Seems you dont have much knowledge in these concepts. But dont worry keep practicing";
+//alert("Your score is"+cnt);
+document.getElementById("fs").innerHTML="THANK YOU";
+}
+</script>
+
+</div>
+<form onsubmit="ff(this.id)" method="post" id="frm">
+<div style='text-align:center'><button type="button" onclick="ff()" id="fs" style="background-color:green;font-size:25px;font-style:bold;text-align:center">SUBMIT TEST</button></div>
+</form>
+
+</body>
+</html>
